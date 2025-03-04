@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{a1abc021-ae38-4262-9cf3-bf96f0a5ce90}</ProjectGuid>
+    <RootNamespace>GameEngineContents</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;..\GameEngineCore\ThirdParty\PhysX\inc;..\GameEngineCore\ThirdParty\Fbx\inc;..\GameEngineCore\ThirdParty\HBAO\inc</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Bin\$(Platform)\$(Configuration)\;..\;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;..\GameEngineCore\ThirdParty\PhysX\inc;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)Bin\$(Platform)\$(Configuration)\;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;..\GameEngineCore\ThirdParty\PhysX\inc;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(SolutionDir)Bin\$(Platform)\$(Configuration)\;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);..\;..\GameEngineCore\ThirdParty\PhysX\inc;..\GameEngineCore\ThirdParty\Fbx\inc;..\GameEngineCore\ThirdParty\HBAO\inc</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Bin\$(Platform)\$(Configuration)\;..\;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PreCompile.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PreCompile.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PreCompile.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PreCompile.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddSouls.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="AllFadeEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="AnimationInfoGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="AppearTextures.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BaseActor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BaseActor_Para.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BaseActor_Struct.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BasePlayer.cpp" />
+    <ClCompile Include="BloomEffect.cpp" />
+    <ClCompile Include="BloomGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BoneSocketCollision.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BoneSoundFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Boss_Vordt_State.cpp" />
+    <ClCompile Include="BaseMonster.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="CameraCapsule.cpp" />
+    <ClCompile Include="ContentsFogWallRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsHitRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="EventCol.cpp" />
+    <ClCompile Include="LoadingLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="LothricKn_Debug.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="BossHpUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Object_BaseLadder.cpp" />
+    <ClCompile Include="Object_Box.cpp" />
+    <ClCompile Include="Object_CandleHuman2.cpp" />
+    <ClCompile Include="Object_FogWall.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Object_HumanTree1.cpp" />
+    <ClCompile Include="Object_HumanTree2.cpp" />
+    <ClCompile Include="Object_HumanTree3.cpp" />
+    <ClCompile Include="Object_HumanTree4.cpp" />
+    <ClCompile Include="Object_HumanTree5.cpp" />
+    <ClCompile Include="Object_OakBarrel.cpp" />
+    <ClCompile Include="Object_OakBarrel2.cpp" />
+    <ClCompile Include="Object_Shelf.cpp" />
+    <ClCompile Include="Object_Torchlight.cpp" />
+    <ClCompile Include="PatrolPath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="SingleCenterSoundFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MaterialLoopSoundFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="CollisionUpdateFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ConnectIDPacket.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentResources.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsAlphaSpriteRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsControlInput.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsControlWindow.cpp" />
+    <ClCompile Include="ContentsCore.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsDebug.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsFireRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsLight.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsMath.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="ContentsMouseInput.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DS3DummyData.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyActor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyPolyCollision.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyPolySoundFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="DummyProjectile.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="FireGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="FogGUI.cpp" />
+    <ClCompile Include="HitInteraction.cpp" />
+    <ClCompile Include="LUTEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="LUTGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MainUIActor.cpp" />
+    <ClCompile Include="MonsterHpBar.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MonsterInfoGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_HitInteraction.cpp" />
+    <ClCompile Include="Monster_HollowSoldier_Crossbow.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_HollowSoldier_RoundShield.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_HollowSoldier_Spear.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_Hollow_Assassin.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Object_BossDoor.cpp" />
+    <ClCompile Include="Object_CandleHuman.cpp" />
+    <ClCompile Include="Object_CastleDoor.cpp" />
+    <ClCompile Include="Object_Desk.cpp" />
+    <ClCompile Include="Object_Ladder1.cpp" />
+    <ClCompile Include="Object_Ladder2.cpp" />
+    <ClCompile Include="Object_Ladder3.cpp" />
+    <ClCompile Include="Object_Ladder4.cpp" />
+    <ClCompile Include="Object_Ladder5.cpp" />
+    <ClCompile Include="Object_Ladder6.cpp" />
+    <ClCompile Include="Object_Skeleton.cpp" />
+    <ClCompile Include="Object_Skeleton1.cpp" />
+    <ClCompile Include="Object_StartDoor.cpp" />
+    <ClCompile Include="Object_bonfire.cpp" />
+    <ClCompile Include="Object_Table.cpp" />
+    <ClCompile Include="PlayerValue.cpp" />
+    <ClCompile Include="FrameEventManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Player_HitInteraction.cpp" />
+    <ClCompile Include="shield.cpp" />
+    <ClCompile Include="Stage_Lothric.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Stage_Lothric_State.cpp" />
+    <ClCompile Include="SwitchFlagFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="FrameEventHelper.cpp" />
+    <ClCompile Include="FrameEventObject.cpp" />
+    <ClCompile Include="FXAAEffect.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GameContentsFBXRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GameEngineNetWindow.cpp" />
+    <ClCompile Include="GlobalValue.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="HBAOGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="LightGUI.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_Hollow.cpp" />
+    <ClCompile Include="Monster_HollowSoldier.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_HollowSoldier_Lantern.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_HollowSoldier_Sword.cpp" />
+    <ClCompile Include="Monster_Hollow_NonFirstAttack.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_Hollow_RaggedRobes.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_Hollow_Unarmed.cpp" />
+    <ClCompile Include="Monster_LothricKn.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Monster_LothricKn_State.cpp" />
+    <ClCompile Include="ObjectPacket.cpp" />
+    <ClCompile Include="Player.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Player_State.cpp" />
+    <ClCompile Include="PlayLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="PreCompile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SoundFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TestLevel_Boss.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Boss_Vordt.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TestLevel_Map.cpp" />
+    <ClCompile Include="TestLevel_MapObject.cpp" />
+    <ClCompile Include="TestLevel_Monster.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TestLevel_ObjectTest.cpp" />
+    <ClCompile Include="TestLevel_Shader.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TestMap.cpp" />
+    <ClCompile Include="TestMapObject.cpp" />
+    <ClCompile Include="TestObject_Shader.cpp" />
+    <ClCompile Include="TitleButton.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TitleLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TitleLogo.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TreeWindow.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TriggerActor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="TurnSpeedFrameEvent.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIActor.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIAlert.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIAlertMaanger.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIAlert_BoneLit.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIAlert_Destroy.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIAlert_YouDie.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIEquipFrame.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="GaugeRenderer.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UILoading.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UILocationAlert.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIPlayerEquip.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIPlayerGaugeBar.cpp" />
+    <ClCompile Include="UISystemManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="UIUnit.cpp" />
+    <ClCompile Include="UI_Utils.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WorldMap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddSouls.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AllFadeEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AnimationInfoGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="AppearTextures.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BaseActor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BaseActor_Para.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BaseActor_Struct.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BaseMonster.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BasePlayer.h" />
+    <ClInclude Include="BloomEffect.h" />
+    <ClInclude Include="BloomGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BoneSocketCollision.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BoneSoundFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="CameraCapsule.h" />
+    <ClInclude Include="ContentsFogWallRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsHitRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="EventCol.h" />
+    <ClInclude Include="LoadingLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="LothricKn_Debug.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="BossHpUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Object_BaseLadder.h" />
+    <ClInclude Include="Object_Box.h" />
+    <ClInclude Include="Object_CandleHuman2.h" />
+    <ClInclude Include="Object_FogWall.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Object_HumanTree1.h" />
+    <ClInclude Include="Object_HumanTree2.h" />
+    <ClInclude Include="Object_HumanTree3.h" />
+    <ClInclude Include="Object_HumanTree4.h" />
+    <ClInclude Include="Object_HumanTree5.h" />
+    <ClInclude Include="Object_OakBarrel.h" />
+    <ClInclude Include="Object_OakBarrel2.h" />
+    <ClInclude Include="Object_Shelf.h" />
+    <ClInclude Include="Object_Torchlight.h" />
+    <ClInclude Include="PatrolPath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SingleCenterSoundFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MaterialLoopSoundFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="CollisionUpdateFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ConnectIDPacket.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentResources.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsAlphaSpriteRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsControlInput.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsControlWindow.h" />
+    <ClInclude Include="ContentsCore.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsDebug.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsEnum.h" />
+    <ClInclude Include="ContentsFireRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsLight.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsMath.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ContentsMouseInput.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DS3DummyData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyActor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyPolyCollision.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyPolySoundFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="DummyProjectile.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="HitInteraction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MonsterHpBar.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HitInteraction.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="FogGUI.h" />
+    <ClInclude Include="LUTEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="LUTGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MainUIActor.h" />
+    <ClInclude Include="MonsterInfoGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HollowSoldier_Crossbow.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HollowSoldier_RoundShield.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HollowSoldier_Spear.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_Hollow_Assassin.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Object_BossDoor.h" />
+    <ClInclude Include="Object_CandleHuman.h" />
+    <ClInclude Include="Object_CastleDoor .h" />
+    <ClInclude Include="Object_Desk.h" />
+    <ClInclude Include="Object_Ladder1.h" />
+    <ClInclude Include="Object_Ladder2.h" />
+    <ClInclude Include="Object_Ladder3.h" />
+    <ClInclude Include="Object_Ladder4.h" />
+    <ClInclude Include="Object_Ladder5.h" />
+    <ClInclude Include="Object_Ladder6.h" />
+    <ClInclude Include="Object_Skeleton.h" />
+    <ClInclude Include="Object_Skeleton1.h" />
+    <ClInclude Include="Object_StartDoor.h" />
+    <ClInclude Include="Object_bonfire.h" />
+    <ClInclude Include="Object_Table.h" />
+    <ClInclude Include="PlayerValue.h" />
+    <ClInclude Include="FrameEventManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Player_HitInteraction.h" />
+    <ClInclude Include="shield.h" />
+    <ClInclude Include="Stage_Lothric.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="SwitchFlagFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="FrameEventHelper.h" />
+    <ClInclude Include="FrameEventObject.h" />
+    <ClInclude Include="FXAAEffect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GameContentsFBXRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GameEngineNetWindow.h" />
+    <ClInclude Include="GlobalValue.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="HBAOGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="LightGUI.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_Hollow.h" />
+    <ClInclude Include="Monster_HollowSoldier.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HollowSoldier_Lantern.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_HollowSoldier_Sword.h" />
+    <ClInclude Include="Monster_Hollow_NonFirstAttack.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_Hollow_RaggedRobes.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Monster_Hollow_Unarmed.h" />
+    <ClInclude Include="Monster_LothricKn.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="ObjectPacket.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PacketHeader.h" />
+    <ClInclude Include="Player.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PlayLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="PreCompile.h" />
+    <ClInclude Include="SoundFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TestLevel_Boss.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Boss_Vordt.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TestLevel_Map.h" />
+    <ClInclude Include="TestLevel_MapObject.h" />
+    <ClInclude Include="TestLevel_Monster.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TestLevel_ObjectTest.h" />
+    <ClInclude Include="TestLevel_Shader.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TestMap.h" />
+    <ClInclude Include="TestMapObjcet.h" />
+    <ClInclude Include="TestObject_Shader.h" />
+    <ClInclude Include="TitleButton.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TitleLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TitleLogo.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TreeWindow.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TriggerActor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="TurnSpeedFrameEvent.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIActor.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIAlert.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIAlertMaanger.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIAlert_BoneLit.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIAlert_Destroy.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIAlert_YouDie.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIEquipFrame.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="GaugeRenderer.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UILoading.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UILocationAlert.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIPlayerEquip.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIPlayerGaugeBar.h" />
+    <ClInclude Include="UISystemManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="UIUnit.h" />
+    <ClInclude Include="UI_Utils.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WorldMap.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
